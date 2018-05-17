@@ -3,13 +3,13 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
+  config.omniauth :twitter, ENV["TWITTER_API_KEY"], ENV["TWITTER_API_SECRET"]
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '330bf1990cae612411a8a585e505bef9216111f8f91be0dccbe774a560cbb22e55de3396004ffd15e180021f6f2dc3b0109cb62b1c0dd2388c78eec22c241514'
-  
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
