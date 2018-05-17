@@ -29,6 +29,8 @@ gem 'devise-bootstrap-views'
 gem 'dotenv-rails'
 # 画像をリサイズ
 gem 'mini_magick'
+# 楽天Webサービス
+gem 'rakuten_web_service'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
