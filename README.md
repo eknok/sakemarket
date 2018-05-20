@@ -7,8 +7,8 @@ https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E9%85%92%E3%81%AE%E9%8A%98%E6%9
   ※今回は..）
 
 ### 使用するAPI
-- RakutenWebService - (URL)[https://webservice.rakuten.co.jp/api/ichibaitemsearch/]
-- Amazon アソシエイト - (URL)[https://affiliate.amazon.co.jp/assoc_credentials/home]
+- RakutenWebService - [URL](https://webservice.rakuten.co.jp/api/ichibaitemsearch/)
+- Amazon アソシエイト - [URL](https://affiliate.amazon.co.jp/assoc_credentials/home)
 ※どちらも画像の表示の為
 
 ### 言語
@@ -17,3 +17,5 @@ Ruby on Rails
 ### その他
 スタイルは Bootstrapを使用
 D3.jsを採用するかも..?
+
+Amazonは審査待ち
