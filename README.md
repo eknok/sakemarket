@@ -17,3 +17,5 @@ Ruby on Rails
 ### その他
 スタイルは Bootstrapを使用
 D3.jsを採用するかも..?
+
+Amazonは審査待ち
