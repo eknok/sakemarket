@@ -1,0 +1,20 @@
+<style>
+  img {
+    height: 100%;
+    max-width: 100%;
+  }
+</style>
+<h1>Top#index</h1>
+<p>Find me in app/views/top/index.html.erb</p>
+<%= @results.each do |result| %>
+  <p><%= result['itemName'] %></p>
+  <p><%= result['catchcopy'] %></p>
+  <p><%= result['itemPrice'] %></p>
+  <p><a href="<%= result['itemUrl'] %>"><%= result['itemUrl'] %></a></p>
+  <% result['smallImageUrls'].each do |result| %>
+    <%= image_tag result %>
+  <% end %>
+  <% result['mediumImageUrls'].each do |result| %>
+    <%= image_tag result %>
+  <% end %><tr>
+<% end %>
