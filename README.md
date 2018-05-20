@@ -18,4 +18,8 @@ Ruby on Rails
 スタイルは Bootstrapを使用
 D3.jsを採用するかも..?
 
+- Github - https://github.com/eknok/sakemarket
+- Heroku - https://sakemaker.herokuapp.com
+
+### めも
 Amazonは審査待ち
