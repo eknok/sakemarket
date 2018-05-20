@@ -1,20 +1,39 @@
+<%= stylesheet_link_tag "posts/jquery.simplyscroll", :media => "all" %>
+<%= javascript_include_tag 'jquery.simplyscroll.js' %>
 <style>
   img {
     height: 100%;
     max-width: 100%;
   }
 </style>
+<script>
+(function($){
+  $(function(){
+    $('#loopSlide ul').simplyScroll({
+        autoMode: 'loop',
+        speed: 1,
+        frameRate: 60,
+        horizontal: true,
+        pauseOnHover: false
+        pauseOnTouch: true
+    });
+  });
+})(jQuery);
+</script>
 <h1>Top#index</h1>
-<p>Find me in app/views/top/index.html.erb</p>
 <% @results.each do |result| %>
   <p><%= result['itemName'] %></p>
   <p><%= result['catchcopy'] %></p>
   <p><%= result['itemPrice'] %></p>
   <p><a href="<%= result['itemUrl'] %>"><%= result['itemUrl'] %></a></p>
-  <% result['smallImageUrls'].each do |result| %>
-    <%= image_tag result %>
-  <% end %>
-  <% result['mediumImageUrls'].each do |result| %>
-    <%= image_tag result %>
-  <% end %><tr>
+  <div id="loopSlide">
+    <ul>
+      <% result['smallImageUrls'].each do |result| %>
+        <li><%= image_tag result %></li>
+      <% end %>
+      <% result['mediumImageUrls'].each do |result| %>
+        <li><%= image_tag result %></li>
+      <% end %>
+    </ul>
+  </div>
 <% end %>
