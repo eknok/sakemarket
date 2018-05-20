@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'post/index'
-
-  get 'post/show'
-
-  get 'post/edit'
+  resources :posts, only: [:index, :show, :edit, :update, :destroy]
 
   devise_for :users, controllers: { :omniauth_callbacks => "omniauth_callbacks" }
   root to: 'top#index'

@@ -6,6 +6,5 @@ class TopController < ApplicationController
             imageFlag: 1,
             hits: 2,
           })
-
   end
 end

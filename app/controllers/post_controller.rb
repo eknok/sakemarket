@@ -8,4 +8,15 @@ class PostController < ApplicationController
 
   def edit
   end
+
+  def update
+  end
+
+  def destroy
+  end
+
+  private
+
+  def post_params
+  end
 end

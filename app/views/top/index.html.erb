@@ -12,9 +12,9 @@
   <p><%= result['itemPrice'] %></p>
   <p><a href="<%= result['itemUrl'] %>"><%= result['itemUrl'] %></a></p>
   <% result['smallImageUrls'].each do |result| %>
-    <p><%= image_tag result %></p>
+    <%= image_tag result %>
   <% end %>
   <% result['mediumImageUrls'].each do |result| %>
-    <p><%= image_tag result %></p>
-  <% end %>
+    <%= image_tag result %>
+  <% end %><tr>
 <% end %>
