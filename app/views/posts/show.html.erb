@@ -1,9 +1,17 @@
-<h1>Post#show</h1>
-<p>Find me in app/views/post/show.html.erb</p>
-<p>
-<%= @post.name %>
-<%= @post.sake_name %>
-<%= @post.kana_name %>
-<%= @post.company %>
-<%= @post.city %>
-</p>
+<div class="post-show-container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>
+        <%= @post.sake_name %>
+        <font size=2>（<%= @post.kana_name? ? @post.kana_name : "ふりがなは登録されていません" %>）</font>
+      </h3>
+      <p><%= @post.name %><%= @post.city %></p>
+      <p>Made in <%= @post.company %></p>
+    </div>
+    <div class="col-md-8">
+      <div class="">
+
+      </div>
+    </div>
+  </div>
+</div>
