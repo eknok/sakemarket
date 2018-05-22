@@ -9,10 +9,12 @@
     </p>
     <% @keyword_results.each do |keyword_result| %>
       <div class="search-result">
-        <h5><%= link_to keyword_result.sake_name, post_path(keyword_result) %></h5>
+        <h5>
+          <%= link_to keyword_result.sake_name, post_path(keyword_result) %>
+          <font size=2>（<%= keyword_result.kana_name? ? keyword_result.kana_name : "ふりがなは登録されていません" %>）</font>
+        </h5>
       </div>
       <%= keyword_result.name %>
-      <%= keyword_result.kana_name %>
       <%= keyword_result.company %>
       <%= keyword_result.city %>
     <% end %>
@@ -23,12 +25,15 @@
     </p>
     <% @city_results.each do |city_result| %>
       <div class="search-result">
-        <h5><%= link_to city_result.sake_name, post_path(city_result) %></h5>
+        <h5>
+          <%= link_to city_result.sake_name, post_path(city_result) %>
+          <font size=2>（<%= city_result.kana_name? ? city_result.kana_name : "ふりがなは登録されていません" %>）</font>
+        </h5>
       </div>
       <%= city_result.name %>
       <%= city_result.kana_name %>
       <%= city_result.company %>
-      <%= city_result.city %>
+      <%= city_result.city %><br>
     <% end %>
   <% end %>
 
