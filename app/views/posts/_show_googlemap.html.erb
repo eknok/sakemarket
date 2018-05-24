@@ -1,0 +1,54 @@
+<script type="text/javascript">
+    function initMap() {
+
+        var test ={lat: 35.6585805, lng: 139.7454329};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: test
+        });
+        var transitLayer = new google.maps.TransitLayer();
+        transitLayer.setMap(map);
+
+        var contentString =  '〒105-0011 東京都港区芝公園４丁目２-８';
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position:test,
+            map: map,
+            title: contentString
+        });
+
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=[<%= ENV["GOOGLE_MAP_API"] %>]&callback=initMap">
+</script>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @adress %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+</p>
+
+<style type="text/css">
+  #map { height: 400px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:left;
+    width: 80%;}
+</style>
+<div id="map"></div>

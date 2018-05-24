@@ -1,0 +1,7 @@
+<h6 class="text-left">日本酒の名前から探す</h6>
+<%= form_tag(posts_path, method: :get, class: 'form-inline col-md-12') do %>
+  <div class="form-group">
+    <%= text_field_tag :keyword, params[:search], class: 'form-control', placeholder: "例）獺祭" %>
+  </div>
+  <%= submit_tag '検索', class: 'btn btn-success' %>
+<% end %><br>

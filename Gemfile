@@ -32,6 +32,8 @@ gem 'dotenv-rails'
 gem 'mini_magick'
 # 楽天Webサービス
 gem 'rakuten_web_service'
+# 緯度経度を取得 google_map
+gem 'geocoder'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

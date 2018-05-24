@@ -1,10 +1,5 @@
 class TopController < ApplicationController
   def index
-
-    @results = RakutenWebService::Ichiba::Item.search({
-            keyword: '獺祭',
-            imageFlag: 1,
-            hits: 2,
-          })
+    @posts = Post.order("RANDOM()").limit(9)
   end
 end

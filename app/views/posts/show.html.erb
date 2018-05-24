@@ -1,0 +1,17 @@
+<div class="post-show-container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>
+        <%= @post.sake_name %>
+        <font size=2>（<%= @post.kana_name? ? @post.kana_name : "ふりがなは登録されていません" %>）</font>
+      </h3>
+      <p><%= @post.name %><%= @post.city %></p>
+      <p>Made in <%= @post.company %></p>
+    </div>
+    <div class="col-md-8">
+      <div class="post-show-googlemap">
+        <%= render 'show_googlemap' %>
+      </div>
+    </div>
+  </div>
+</div>
