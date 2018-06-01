@@ -1,7 +1,7 @@
 <script type="text/javascript">
     function initMap() {
 
-        var test ={lat: 35.6585805, lng: 139.7454329};
+        var test = { lat: 35.6585805, lng: 139.7454329 };
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: test
@@ -9,7 +9,7 @@
         var transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(map);
 
-        var contentString = '〒105-0011 東京都港区芝公園４丁目２-８';
+        var contentString = "<%= @address %>";
         var infowindow = new google.maps.InfoWindow({
             content: contentString
         });
