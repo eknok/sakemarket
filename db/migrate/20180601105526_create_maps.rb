@@ -8,6 +8,5 @@ class CreateMaps < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-     add_index :maps, [:post_id]
   end
 end
