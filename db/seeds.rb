@@ -1,3 +1,4 @@
+# 一段階目(jsonファイルからPostモデル)
 # # ActiveSupport::JSONを使ってhoge.jsonをデコードしてrubyオブジェクトに変換。変数jsonに展開
 # json = ActiveSupport::JSON.decode(File.read('sake.json'))
 #
@@ -16,8 +17,8 @@
 #   end
 # end
 
+# # ２段階目（geocoding）
 # posts = Post.all
-#
 # posts.each do |post|
 #   Map.create!(
 #     address: post.name + post.city,
@@ -25,9 +26,10 @@
 #   )
 # end
 
-maps = Map.where(latitude: nil, longitude: nil)
+# ３段階目（緯度経度がnilを探して更新）
+maps = Map.where(latitude: nil)
 maps.each do |map|
-  Map.update(
+  map.update(
     address: map.address
   )
 end
