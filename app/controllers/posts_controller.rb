@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @adress = @post.name + @post.city
+    @map = @post.maps.find(@post.id)
   end
 
   def edit

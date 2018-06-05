@@ -20,4 +20,5 @@
 /node_modules
 /yarn-error.log
 .env
+.pryrc
 .byebug_history

@@ -1,7 +1,7 @@
 <script type="text/javascript">
     function initMap() {
 
-        var test = { lat: 35.6585805, lng: 139.7454329 };
+        var test = { lat: <%= @map.latitude %>, lng: <%= @map.longitude %> };
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 15,
             center: test
@@ -9,7 +9,7 @@
         var transitLayer = new google.maps.TransitLayer();
         transitLayer.setMap(map);
 
-        var contentString = "<%= @address %>";
+        var contentString = "<%= @map.address %>";
         var infowindow = new google.maps.InfoWindow({
             content: contentString
         });
@@ -30,10 +30,10 @@
 </script>
 <p>
   <strong>Address:</strong>
-  <%= @adress %>
+  <%= @map.address %>
 </p>
 <style type="text/css">
-  #map { height: 400px;
+  #map { height: 200px;
     margin-left:auto;
     margin-right:auto;
     text-align:left;
