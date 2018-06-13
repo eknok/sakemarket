@@ -34,6 +34,8 @@ gem 'mini_magick'
 gem 'rakuten_web_service'
 # 緯度経度を取得 google_map
 gem 'geocoder'
+# paginate Commentに対して
+gem 'kaminari'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
