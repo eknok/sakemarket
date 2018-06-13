@@ -12,7 +12,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @map = @post.maps.find(@post.id)
-    @comments = @post.comments
+    @posts = Post.page(params[:page])
+    @comments = @post.comments.page(params[:page]).per(3).order('updated_at DESC')
     @comment = @post.comments.build
   end
 

@@ -3,5 +3,6 @@
     <% @comments.each do |comment| %>
       <p><%= comment.content %></p>
     <% end %>
+    <%= paginate @comments %>
   <% end %>
 </div>
