@@ -17,7 +17,7 @@ Ruby (2.5.1)
 
 ### その他
 スタイルは Bootstrapを使用
-D3.jsを採用するかも..?  
+D3.jsを採用するかも..?(6.6不採用-めんどくさい)  
 
 - Github - https://github.com/eknok/sakemarket
 - Heroku - https://sakemaker.herokuapp.com
@@ -37,7 +37,7 @@ D3.jsを採用するかも..?
 
 #### posts/show  
 
-- googlemapの表示  
+- googlemapの表示(酒造会社の緯度経度が入っていなかった..プルリクで詳細)  
 小さく表示でなんとなく飾り的な感じでいい  
 
 評価の画面配置やどんな評価の仕方にするか
