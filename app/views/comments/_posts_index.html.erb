@@ -1,5 +1,7 @@
-<% if @comments %>
-  <% @comments.each do |comment| %>
-    <p><%= comment.content %></p>
+<div class="post_comments">
+  <% if @comments %>
+    <% @comments.each do |comment| %>
+      <p><%= comment.content %></p>
+    <% end %>
   <% end %>
-<% end %>
+</div>
