@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :review, only: [:create, :update, :destroy]
   resources :posts, only: [:index, :show, :edit, :update, :destroy] do
     resources :comments, only: [:index, :create, :update, :destory]
   end

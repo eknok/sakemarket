@@ -23,7 +23,7 @@
             <div class="card-body">
               <h5 class="card-title">
                 <%= post.sake_name %>
-                <font size=2>（<%= post.kana_name? ? post.kana_name : "ふりがなは登録されていません" %>）</font>
+                <font size=2>（<%= post.kana_name? ? post.kana_name : "ふりがな登録なし" %>）</font>
               </h5>
               <p class="card-text"><%= post.name %> <%= post.city %></p>
               <p class="card-text"><small class="text-muted"><%= link_to '♡', root_path %> <%= Post.all.count %></small></p>
